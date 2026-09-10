@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ange Djuissi | Hardware Well Being</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fb;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        header {
+            min-height: 520px;
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #111827, #1d4ed8);
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
+
+        header h2 {
+            margin: 10px 0;
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        header p {
+            max-width: 720px;
+            margin: 15px auto;
+            font-size: 18px;
+        }
+
+        nav {
+            margin-top: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 8px 14px;
+            font-weight: bold;
+        }
+
+        .main-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 22px;
+            background: white;
+            color: #1d4ed8;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 20px;
+        }
+
+        h2 {
+            color: #17376e;
+            font-size: 32px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            padding: 9px 15px;
+            background: #dbeafe;
+            color: #1e3a8a;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .project h3 {
+            color: #1d4ed8;
+        }
+
+        .project-button {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px 5px 0 0;
+            color: white;
+            background: #1d4ed8;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .project-button.disabled {
+            background: #64748b;
+        }
+
+        #contact {
+            text-align: center;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 36px;
+            }
+
+            header h2 {
+                font-size: 21px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ange Djuissi</h1>
+
+    <h2>Hardware & Embedded Systems Engineer</h2>
+
+    <p>
+        Bachelorabsolventin der Gesundheitselektronik und
+        Masterstudentin im Studiengang Computer Engineering an der HTW Berlin.
+    </p>
+
+    <nav>
+        <a href="#about">Über mich</a>
+        <a href="#skills">Kenntnisse</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+    <div>
+        <a class="main-button" href="#projects">
+            Meine Projekte ansehen
+        </a>
+    </div>
+</header>
+
+<section id="about">
+    <h2>Über mich</h2>
+
+    <p>
+        Ich interessiere mich besonders für Hardwareentwicklung,
+        Embedded Systems und Medizintechnik. In meinen Studien- und
+        Praxisprojekten verbinde ich Elektronik, Sensorik und
+        hardwarenahe Softwareentwicklung.
+    </p>
+
+    <p>
+        Ich arbeite gerne praktisch und entwickle Lösungen von der
+        Schaltung und dem PCB-Design bis zur Programmierung,
+        Inbetriebnahme und Fehleranalyse.
+    </p>
+</section>
+
+<section id="skills">
+    <h2>Technische Kenntnisse</h2>
+
+    <div class="skills">
+        <span>KiCad</span>
+        <span>C/C++</span>
+        <span>Python</span>
+        <span>Arduino</span>
+        <span>Raspberry Pi</span>
+        <span>ROS2</span>
+        <span>Linux</span>
+        <span>GitLab</span>
+        <span>GitHub</span>
+        <span>Embedded Systems</span>
+        <span>Messtechnik</span>
+        <span>Schaltungsentwicklung</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Meine Projekte</h2>
+
+    <div class="projects">
+
+        <article class="project">
+            <h3>Smart Patient Monitoring System</h3>
+
+            <p>
+                Überwachung von Herzfrequenz und Temperatur mit
+                Display und automatischer Alarmfunktion.
+            </p>
+
+            <p>
+                <strong>Technologien:</strong>
+                Arduino, C++, Sensorik, I²C, OLED
+            </p>
+
+            <a class="project-button disabled" href="#">
+                Demnächst verfügbar
+            </a>
+        </article>
+
+        <article class="project">
+            <h3>EKG-Verstärker</h3>
+
+            <p>
+                Entwicklung eines Schaltplans und PCB-Layouts
+                zur Erfassung und Verstärkung eines EKG-Signals.
+            </p>
+
+            <p>
+                <strong>Technologien:</strong>
+                KiCad, Analogtechnik, PCB-Design
+            </p>
+
+            <a class="project-button disabled" href="#">
+                Demnächst verfügbar
+            </a>
+        </article>
+
+        <article class="project">
+            <h3>Widerstandsmessgerät</h3>
+
+            <p>
+                Entwicklung eines automatisierten Messsystems
+                mit Raspberry Pi, Relais und ungefähr 45 Messleitungen.
+            </p>
+
+            <p>
+                <strong>Technologien:</strong>
+                Raspberry Pi, Relais, KiCad, Python
+            </p>
+
+            <a class="project-button disabled" href="#">
+                Demnächst verfügbar
+            </a>
+        </article>
+
+        <article class="project">
+            <h3>ROS2-Visualisierung</h3>
+
+            <p>
+                Entwicklung von Dummy-Publishern und Testsignalen
+                für ein ROS2-Visualisierungssystem.
+            </p>
+
+            <p>
+                <strong>Technologien:</strong>
+                ROS2, Python, Docker, Linux
+            </p>
+
+            <a class="project-button disabled" href="#">
+                Demnächst verfügbar
+            </a>
+        </article>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+
+    <p>Berlin, Deutschland</p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/Ange99-htw" target="_blank">
+            github.com/Ange99-htw
+        </a>
+    </p>
+</section>
+
+<footer>
+    <p>© 2026 Ange Djuissi · Hardware & Embedded Systems</p>
+</footer>
+
+</body>
+</html>
