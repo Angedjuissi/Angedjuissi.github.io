@@ -48,10 +48,15 @@
     .gallery figure{margin:0;background:#55463b;border-radius:15px;overflow:hidden}
     .gallery img{display:block;width:100%;height:500px;object-fit:cover}
     .gallery figcaption{padding:16px 18px;color:#f8efe2}
-    .technical-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}
-    .technical-gallery figure{margin:0;background:#55463b;border-radius:12px;overflow:hidden}
-    .technical-gallery img{display:block;width:100%;height:260px;object-fit:cover}
-    .technical-gallery figcaption{padding:13px 15px;color:#f8efe2;font-size:14px}
+    .measurement-detail{max-width:none;background:var(--beige)}
+    .measurement-inner{max-width:1160px;margin:auto}
+    .measurement-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+    .measurement-facts{background:var(--white);padding:26px;border-radius:14px}
+    .measurement-facts ul{padding-left:20px}
+    .technical-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+    .technical-gallery figure{margin:0;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(63,51,43,.1)}
+    .technical-gallery img{display:block;width:100%;height:235px;object-fit:cover}
+    .technical-gallery figcaption{padding:12px 14px;color:var(--brown);font-size:14px}
     #contact{text-align:center}
     footer{padding:28px;text-align:center;background:var(--green-dark);color:var(--white)}
     @media(max-width:800px){
@@ -139,12 +144,12 @@
       </div>
     </article>
     <article class="project">
-      <img src="assets/project-resistance.webp" alt="Automatisiertes Widerstandsmessgerät mit Relais und Einplatinencomputer">
+      <img src="assets/control-cabinet-1.webp" alt="Reales Widerstandsmessgerät mit acht Relais und strukturierter Verdrahtung">
       <div class="project-content">
-        <h3>Widerstandsmessgerät</h3>
-        <p>Automatisiertes Messsystem mit Raspberry Pi, acht Relais und ungefähr 45 Messleitungen.</p>
-        <p class="tech">Raspberry Pi · Relais · KiCad · Python</p>
-        <span class="project-button">In Vorbereitung</span>
+        <h3>Widerstandsmessgerät mit 8 Relais</h3>
+        <p>Konzeption, Schaltplanentwicklung, Verdrahtung und Aufbau eines automatisierten Messsystems mit ungefähr 45 Leitungen.</p>
+        <p class="tech">Raspberry Pi · 8 Relais · KiCad · Löten · Messtechnik</p>
+        <a class="project-button" href="#messgeraet">Projekt ansehen</a>
       </div>
     </article>
     <article class="project">
@@ -156,6 +161,46 @@
         <span class="project-button">In Vorbereitung</span>
       </div>
     </article>
+  </div>
+</section>
+
+<section class="measurement-detail" id="messgeraet">
+  <div class="measurement-inner">
+    <div class="eyebrow" style="color:var(--green)">Praxisprojekt · Hardwareentwicklung</div>
+    <h2 class="section-title">Automatisiertes Widerstandsmessgerät mit 8 Relais</h2>
+    <p class="section-intro">Entwicklung und Aufbau eines Messsystems zur automatisierten Widerstandsmessung über ungefähr 45 Leitungen.</p>
+    <div class="measurement-grid">
+      <div>
+        <h3>Projektübersicht</h3>
+        <p>Das System integriert einen Raspberry Pi, acht Relais, Anschlussklemmen und die vollständige interne Verdrahtung in einem technischen Gehäuse. Die Relais schalten die verschiedenen Messpfade, damit die Leitungen systematisch geprüft werden können.</p>
+        <p>Der Aufbau verbindet Schaltungsentwicklung, mechanische Integration, Verdrahtung und praktische Messtechnik.</p>
+      </div>
+      <div class="measurement-facts">
+        <h3>Meine Aufgaben</h3>
+        <ul>
+          <li>Erstellung des vollständigen Schaltplans in KiCad</li>
+          <li>Zuordnung und Einbindung der acht Relais</li>
+          <li>Planung der Verdrahtung für ungefähr 45 Leitungen</li>
+          <li>Löten und Konfektionieren von Steckverbindungen</li>
+          <li>Montage der elektronischen Komponenten im Gehäuse</li>
+          <li>Messungen mit dem Multimeter und Funktionsprüfung</li>
+        </ul>
+      </div>
+    </div>
+    <div class="technical-gallery">
+      <figure><img src="assets/messgeraet-relay-wiring.webp" alt="Verdrahtung der Relaiskarte"><figcaption>Aufbau und Verdrahtung der Relaiskarte</figcaption></figure>
+      <figure><img src="assets/messgeraet-pcb-overview.webp" alt="Messgerät mit Leiterplatte und Leitungen"><figcaption>Prototyp mit Leiterplatte und Messleitungen</figcaption></figure>
+      <figure><img src="assets/messgeraet-relay-board.webp" alt="Achtkanal-Relaisplatine"><figcaption>Integration der acht Relais</figcaption></figure>
+      <figure><img src="assets/messgeraet-soldering.webp" alt="Lötarbeit an einer kleinen Platine"><figcaption>Löten und Aufbau einer Baugruppe</figcaption></figure>
+      <figure><img src="assets/messgeraet-multimeter.webp" alt="Widerstandsmessung mit Multimeter"><figcaption>Messung und elektrische Prüfung</figcaption></figure>
+      <figure><img src="assets/messgeraet-integration.webp" alt="Elektronik im Gerätegehäuse"><figcaption>Integration im Gerätegehäuse</figcaption></figure>
+      <figure><img src="assets/messgeraet-kicad.webp" alt="Schaltplan des Messgeräts in KiCad"><figcaption>Schaltplanentwicklung in KiCad</figcaption></figure>
+      <figure><img src="assets/messgeraet-terminals.webp" alt="Farbige Reihenklemmen und Verdrahtung"><figcaption>Strukturierte Leitungsführung und Klemmen</figcaption></figure>
+      <figure><img src="assets/control-cabinet-1.webp" alt="Fertiger Aufbau des Widerstandsmessgeräts"><figcaption>Gesamtaufbau des Messgeräts</figcaption></figure>
+      <figure><img src="assets/control-cabinet-2.webp" alt="Ober- und Unterbau des Messgeräts"><figcaption>Systemintegration im geöffneten Gehäuse</figcaption></figure>
+      <figure><img src="assets/electrical-schematic.webp" alt="Verdrahtungsplan des Messgeräts"><figcaption>Elektrischer Verdrahtungsplan</figcaption></figure>
+      <figure><img src="assets/system-integration.webp" alt="Steuerung und Komponenten des Messgeräts"><figcaption>Komponentenplatzierung und Funktionsprüfung</figcaption></figure>
+    </div>
   </div>
 </section>
 </main>
@@ -173,28 +218,6 @@
       <figure>
         <img src="assets/practical-work-2.webp" alt="Ange Djuissi bei praktischen Montagearbeiten">
         <figcaption>Aufbau, Montage und technische Inbetriebnahme</figcaption>
-      </figure>
-    </div>
-    <div class="technical-gallery">
-      <figure>
-        <img src="assets/control-cabinet-1.webp" alt="Verdrahteter elektrischer Schaltschrank">
-        <figcaption>Schaltschrankaufbau und strukturierte Verdrahtung</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/control-cabinet-2.webp" alt="Elektronisches System im geöffneten Schaltschrank">
-        <figcaption>Integration elektronischer Baugruppen</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/control-panel.webp" alt="Montageplatte mit Steuerungskomponenten">
-        <figcaption>Komponentenplatzierung und Leitungsführung</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/electrical-schematic.webp" alt="Elektrischer Verdrahtungsplan">
-        <figcaption>Arbeiten nach Schalt- und Verdrahtungsplan</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/system-integration.webp" alt="Elektronisches System mit Steuerung und Verdrahtung">
-        <figcaption>Systemintegration und Funktionsprüfung</figcaption>
       </figure>
     </div>
   </div>
