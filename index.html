@@ -53,7 +53,12 @@
     .measurement-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
     .measurement-facts{background:var(--white);padding:26px;border-radius:14px}
     .measurement-facts ul{padding-left:20px}
-    .technical-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+    .schematic{margin:32px 0 40px;padding:clamp(16px,3vw,32px);background:var(--white);border-radius:16px;box-shadow:0 8px 20px rgba(63,51,43,.1)}
+    .schematic h3,.technical-title{color:var(--green-dark);margin:0 0 8px}
+    .schematic figure{margin:20px 0 0}
+    .schematic img{display:block;width:100%;height:auto;border:1px solid var(--beige);border-radius:8px}
+    .schematic figcaption{margin-top:12px;color:var(--muted);font-size:14px}
+    .technical-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
     .technical-gallery figure{margin:0;background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(63,51,43,.1)}
     .technical-gallery img{display:block;width:100%;height:235px;object-fit:cover}
     .technical-gallery figcaption{padding:12px 14px;color:var(--brown);font-size:14px}
@@ -179,12 +184,12 @@
   <div class="measurement-inner">
     <div class="eyebrow" style="color:var(--green)">Praxisprojekt · Hardwareentwicklung</div>
     <h2 class="section-title">Automatisiertes Widerstandsmessgerät mit 8 Relais</h2>
-    <p class="section-intro">Entwicklung und Aufbau eines Messsystems zur automatisierten Widerstandsmessung über ungefähr 45 Leitungen.</p>
+    <p class="section-intro">Ein Messsystem zur automatisierten Widerstandsprüfung von rund 45 Leitungen. Acht Relais schalten die Messpfade, damit die Leitungen systematisch geprüft werden können.</p>
     <div class="measurement-grid">
       <div>
-        <h3>Projektübersicht</h3>
-        <p>Das System integriert einen Raspberry Pi, acht Relais, Anschlussklemmen und die vollständige interne Verdrahtung in einem technischen Gehäuse. Die Relais schalten die verschiedenen Messpfade, damit die Leitungen systematisch geprüft werden können.</p>
-        <p>Der Aufbau verbindet Schaltungsentwicklung, mechanische Integration, Verdrahtung und praktische Messtechnik.</p>
+        <h3>So funktioniert der Aufbau</h3>
+        <p>Im Gehäuse sind Raspberry Pi, Relaiskarte und Anschlussklemmen über die interne Verdrahtung miteinander verbunden. Die Relaiskarte bildet die Schnittstelle zwischen Steuerung und Messpfaden.</p>
+        <p>Mit dem Multimeter habe ich den Aufbau elektrisch geprüft.</p>
       </div>
       <div class="measurement-facts">
         <h3>Meine Aufgaben</h3>
@@ -198,6 +203,17 @@
         </ul>
       </div>
     </div>
+    <div class="schematic">
+      <h3>Schaltungsentwurf in KiCad</h3>
+      <p>Ich habe den Schaltplan erstellt, um die acht Relais den Messpfaden zuzuordnen und die Verdrahtung für den Aufbau zu planen.</p>
+      <figure>
+        <a href="assets/messgeraet-schematic-anonymized.webp" aria-label="KiCad-Schaltplan in voller Größe öffnen">
+          <img src="assets/messgeraet-schematic-anonymized.webp" width="1200" height="617" alt="Anonymisierter Ausschnitt des KiCad-Schaltplans mit Bauteilen und Verbindungen">
+        </a>
+        <figcaption>Anonymisierter Schaltplanausschnitt · Zum Vergrößern auf das Bild klicken.</figcaption>
+      </figure>
+    </div>
+    <h3 class="technical-title">Aufbau und elektrische Prüfung</h3>
     <div class="technical-gallery">
       <figure><img src="assets/messgeraet-relay-wiring.webp" alt="Verdrahtung der Relaiskarte"><figcaption>Aufbau und Verdrahtung der Relaiskarte</figcaption></figure>
       <figure><img src="assets/messgeraet-pcb-overview.webp" alt="Messgerät mit Leiterplatte und Leitungen"><figcaption>Prototyp mit Leiterplatte und Messleitungen</figcaption></figure>
@@ -205,7 +221,6 @@
       <figure><img src="assets/messgeraet-soldering.webp" alt="Lötarbeit an einer kleinen Platine"><figcaption>Löten und Aufbau einer Baugruppe</figcaption></figure>
       <figure><img src="assets/messgeraet-multimeter.webp" alt="Widerstandsmessung mit Multimeter"><figcaption>Messung und elektrische Prüfung</figcaption></figure>
       <figure><img src="assets/messgeraet-integration.webp" alt="Elektronik im Gerätegehäuse"><figcaption>Integration im Gerätegehäuse</figcaption></figure>
-      <figure><img src="assets/messgeraet-schematic-anonymized.webp" alt="Anonymisierter Ausschnitt des KiCad-Schaltplans"><figcaption>Anonymisierter Schaltplanausschnitt aus KiCad</figcaption></figure>
     </div>
   </div>
 </section>
