@@ -124,13 +124,17 @@
   <h2 class="section-title">Meine Projekte</h2>
   <p class="section-intro">Eine Auswahl aus Hardwareentwicklung, Medizintechnik, Messsystemen und Robotik.</p>
   <div class="projects">
-    <article class="project">
-      <img src="assets/hero-embedded.webp" alt="Embedded-Systems-Arbeitsplatz mit Mikrocontroller und Sensoren">
+    <article class="project" id="mysignals">
+      <video controls playsinline preload="none" poster="assets/mysignals-montage.png" style="display:block;width:100%;aspect-ratio:16/9;background:#222" aria-label="Videodemonstration der Arduino-Messstation">
+        <source src="assets/mysignals-demo.mp4" type="video/mp4">
+        <a href="assets/mysignals-demo.mp4">Demonstrationsvideo öffnen</a>
+      </video>
       <div class="project-content">
-        <h3>Smart Patient Monitoring System</h3>
-        <p>Überwachung von Herzfrequenz und Temperatur mit Display und automatischer Alarmfunktion.</p>
-        <p class="tech">Arduino · C++ · Sensorik · I²C · OLED</p>
-        <span class="project-button">In Vorbereitung</span>
+        <h3>Arduino-Messstation für Puls und Temperatur</h3>
+        <p>Im Modul Mikrocomputertechnik entwickelte ich eine Messstation, die das Signal eines optischen Pulssensors und die Temperatur auf einem TFT-Touchdisplay darstellt.</p>
+        <p class="tech">Arduino · C++ · MySignals · KY-039 · ILI9341</p>
+        <a class="project-button" href="downloads/Dokumentation_MySignals.pdf">Dokumentation (PDF)</a>
+        <a class="project-button" href="downloads/MoniteurMySignals.ino" download>Arduino-Sketch</a>
       </div>
     </article>
     <article class="project">
